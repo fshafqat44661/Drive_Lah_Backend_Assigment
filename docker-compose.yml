@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+      - "4000:4000"
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+      - MOCK_PORT=4000
+      - PAYMENTS_API_URL=http://localhost:4000/capture
+      - MONGO_URI=mongodb://mongo:27017/settlements
+    depends_on:
+      - mongo
+    restart: on-failure
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
