@@ -1,0 +1,39 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Build directories
+dist/
+out/
+build/
+
+# Environment variables (CRITICAL: DO NOT REMOVE)
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# Editor folders and files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# OS related
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Testing
+coverage/
+
+# TypeScript
+tsconfig.tsbuildinfo
+config.bat
